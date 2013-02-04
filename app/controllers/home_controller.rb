@@ -4,4 +4,8 @@ class HomeController < ApplicationController
 
   def callback
   end
+
+  def callback2
+    render :text => request.body
+  end
 end

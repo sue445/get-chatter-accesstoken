@@ -1,5 +1,6 @@
 GetChatterAccesstoken::Application.routes.draw do
   match 'callback' => 'home#callback'
+  match 'callback2' => 'home#callback2'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,2 +1,43 @@
-<h1>Home#callback</h1>
-<p>Find me in app/views/home/callback.html.erb</p>
+<%= form_tag "https://login.salesforce.com/services/oauth2/token", :class=>"form-horizontal" do %>
+  <div class="control-group">
+    <label class="control-label" for="code">code</label>
+    <div class="controls">
+      <%= text_field_tag "code", params[:code], :id=>"code", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="grant_type">grant_type</label>
+    <div class="controls">
+      <%= text_field_tag "grant_type", "authorization_code", :id => "grant_type", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="client_id">client_id</label>
+    <div class="controls">
+      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your App's Client Id", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="client_secret">client_secret</label>
+    <div class="controls">
+      <%= text_field_tag "client_secret", "", :id => "client_secret", :placeholder=>"Your App's Client Secret", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="redirect_uri">redirect_uri</label>
+    <div class="controls">
+      <%= text_field_tag "redirect_uri", "https://get-chatter-accesstoken.herokuapp.com/callback2", :id => "redirect_uri", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag "Send", :class=>"btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>
