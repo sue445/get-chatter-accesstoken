@@ -1,2 +1,29 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= form_tag "https://login.salesforce.com/services/oauth2/authorize", :class=>"form-horizontal" do %>
+  <div class="control-group">
+    <label class="control-label" for="response_type">response_type</label>
+    <div class="controls">
+      <%= text_field_tag "response_type", "code", :id=>"response_type", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="client_id">client_id</label>
+    <div class="controls">
+      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your App's Client Id", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="redirect_uri">redirect_uri</label>
+    <div class="controls">
+      <%= text_field_tag "redirect_uri", "https://get-chatter-accesstoken.herokuapp.com/callback", :id => "redirect_uri", :class=>"span6" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag "Send", :class=>"btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>
