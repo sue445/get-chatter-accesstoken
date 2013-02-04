@@ -7,14 +7,14 @@
   </div>
 
   <div class="control-group">
-    <label class="control-label" for="client_id">client_id</label>
+    <label class="control-label" for="client_id">Consumer Key</label>
     <div class="controls">
-      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your App's Client Id", :class=>"span6" %>
+      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your Consumer Key", :class=>"span6" %>
     </div>
   </div>
 
   <div class="control-group">
-    <label class="control-label" for="redirect_uri">redirect_uri</label>
+    <label class="control-label" for="redirect_uri">Callback URL</label>
     <div class="controls">
       <%= text_field_tag "redirect_uri", "https://get-chatter-accesstoken.herokuapp.com/callback", :id => "redirect_uri", :class=>"span6" %>
     </div>
