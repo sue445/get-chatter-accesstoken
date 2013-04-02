@@ -2,35 +2,35 @@
   <div class="control-group">
     <label class="control-label" for="code">code</label>
     <div class="controls">
-      <%= text_field_tag "code", params[:code], :id=>"code", :class=>"span6" %>
+      <%= text_field_tag "code", params[:code], :id=>"code", :class=>"span8" %>
     </div>
   </div>
 
   <div class="control-group">
     <label class="control-label" for="grant_type">grant_type</label>
     <div class="controls">
-      <%= text_field_tag "grant_type", "authorization_code", :id => "grant_type", :class=>"span6" %>
+      <%= text_field_tag "grant_type", "authorization_code", :id => "grant_type", :class=>"span8" %>
     </div>
   </div>
 
   <div class="control-group">
     <label class="control-label" for="client_id">Consumer Key</label>
     <div class="controls">
-      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your Consumer Key", :class=>"span6" %>
+      <%= text_field_tag "client_id", "", :id => "client_id", :placeholder=>"Your Consumer Key", :class=>"span8" %>
     </div>
   </div>
 
   <div class="control-group">
     <label class="control-label" for="client_secret">Consumer Secret</label>
     <div class="controls">
-      <%= text_field_tag "client_secret", "", :id => "client_secret", :placeholder=>"Your Consumer Secret", :class=>"span6" %>
+      <%= text_field_tag "client_secret", "", :id => "client_secret", :placeholder=>"Your Consumer Secret", :class=>"span8" %>
     </div>
   </div>
 
   <div class="control-group">
     <label class="control-label" for="redirect_uri">Callback URL</label>
     <div class="controls">
-      <%= text_field_tag "redirect_uri", "https://get-chatter-accesstoken.herokuapp.com/callback/#{params[:app_name]}", :id => "redirect_uri", :class=>"span6" %>
+      <%= text_field_tag "redirect_uri", "https://get-chatter-accesstoken.herokuapp.com/callback/#{params[:app_name]}", :id => "redirect_uri", :class=>"span8" %>
     </div>
   </div>
 
